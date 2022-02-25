@@ -16,14 +16,14 @@ export function getRoutes() {
         "exact": true
       },
       {
-        "path": "/index",
+        "path": "/",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'layouts__index' */'@/layouts/index')}),
-        "redirect": "/user",
         "routes": [
           {
             "exact": false,
             "path": "/user",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')})
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')}),
+            "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'@/wrappers/auth')})]
           }
         ]
       }
