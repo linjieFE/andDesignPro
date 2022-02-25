@@ -25,4 +25,8 @@ src => 工程目录
 
 #### 配置菜单
 
+方案一：支持修改.umirc.ts 
 .umirc.ts 增加layout:{} 配置项
+
+方案二：config/config.ts中配置项目和插件 支持es6
+
