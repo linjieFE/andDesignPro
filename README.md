@@ -38,3 +38,8 @@ Get 可直接在浏览器访问，delete put post 请用postman上尝试
 http://localhost:8000/api/users
 ```
 
+### Umijs的常用插件
+
+. 启用方式`有src/app.ts`并导出 getInitialState方法时启用，必须搭配`@umijs/plugin-model`一起使用
+
+https://umijs.org/zh-CN/plugins/plugin-initial-state
