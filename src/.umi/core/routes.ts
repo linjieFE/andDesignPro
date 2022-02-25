@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { ApplyPluginsType, dynamic } from '/Users/flexiv/Desktop/andDesignPro/node_modules/umi/node_modules/@umijs/runtime';
+import { ApplyPluginsType } from '/Users/flexiv/Desktop/andDesignPro/node_modules/umi/node_modules/@umijs/runtime';
 import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 
@@ -8,27 +8,27 @@ export function getRoutes() {
   const routes = [
   {
     "path": "/",
-    "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-layout__Layout' */'/Users/flexiv/Desktop/andDesignPro/src/.umi/plugin-layout/Layout.tsx')}),
+    "component": require('/Users/flexiv/Desktop/andDesignPro/src/.umi/plugin-layout/Layout.tsx').default,
     "routes": [
       {
         "path": "/",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'@/pages/index')}),
+        "component": require('@/pages/index').default,
         "exact": true
       },
       {
         "path": "/",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'layouts__index' */'@/layouts/index')}),
+        "component": require('@/layouts/index').default,
         "routes": [
           {
             "exact": false,
             "path": "/user",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')})
+            "component": require('@/pages/user/index').default
           },
           {
             "exact": false,
             "path": "/userinfo",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')}),
-            "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'@/wrappers/auth')})]
+            "component": require('@/pages/user/index').default,
+            "wrappers": [require('@/wrappers/auth').default]
           }
         ]
       }
