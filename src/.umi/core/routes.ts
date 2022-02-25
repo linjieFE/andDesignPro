@@ -11,14 +11,20 @@ export function getRoutes() {
     "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-layout__Layout' */'/Users/flexiv/Desktop/andDesignPro/src/.umi/plugin-layout/Layout.tsx')}),
     "routes": [
       {
-        "exact": true,
         "path": "/",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'@/pages/index')})
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'@/pages/index')}),
+        "exact": true
       },
       {
-        "path": "/user",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')}),
-        "exact": true
+        "path": "/",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'layouts__index' */'@/layouts/index')}),
+        "routes": [
+          {
+            "exact": false,
+            "path": "/user",
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')})
+          }
+        ]
       }
     ]
   }
