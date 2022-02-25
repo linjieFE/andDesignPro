@@ -24,6 +24,11 @@ export function getRoutes() {
             "path": "/user",
             "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')}),
             "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'@/wrappers/auth')})]
+          },
+          {
+            "exact": false,
+            "path": "/userinfo",
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')})
           }
         ]
       }
