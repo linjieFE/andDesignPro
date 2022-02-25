@@ -13,7 +13,12 @@ export function getRoutes() {
       {
         "exact": true,
         "path": "/",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'/Users/flexiv/Desktop/andDesignPro/src/pages/index')})
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'@/pages/index')})
+      },
+      {
+        "path": "/user",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')}),
+        "exact": true
       }
     ]
   }

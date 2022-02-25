@@ -23,10 +23,14 @@ src => 工程目录
 
 #### .umirc.ts 增加mfsu 加速webpack热更新 
 
-#### 配置菜单
+#### 配置项目和插件
 
 方案一：支持修改.umirc.ts 
 .umirc.ts 增加layout:{} 配置项
 
-方案二：config/config.ts中配置项目和插件 支持es6
+方案二：config/config.ts中配置项目和插件 支持es6(通常用方案二)
+
+#### 配置路由
+
+
 
