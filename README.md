@@ -32,5 +32,9 @@ src => 工程目录
 
 #### 配置路由
 
-
+### Mock
+Get 可直接在浏览器访问，delete put post 请用postman上尝试
+```
+http://localhost:8000/api/users
+```
 
