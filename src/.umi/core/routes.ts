@@ -22,13 +22,13 @@ export function getRoutes() {
           {
             "exact": false,
             "path": "/user",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')}),
-            "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'@/wrappers/auth')})]
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')})
           },
           {
             "exact": false,
             "path": "/userinfo",
-            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')})
+            "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__user__index' */'@/pages/user/index')}),
+            "wrappers": [dynamic({ loader: () => import(/* webpackChunkName: 'wrappers' */'@/wrappers/auth')})]
           }
         ]
       }
