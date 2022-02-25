@@ -4,9 +4,9 @@ interface IProps{
 }
 function Layout({children}:IProps){
     return (
-        <>
+        <div style={{color:'red'}}>
             {children}
-        </>
+        </div>
     )
 }
 export default Layout

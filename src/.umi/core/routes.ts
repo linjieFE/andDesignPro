@@ -16,8 +16,9 @@ export function getRoutes() {
         "exact": true
       },
       {
-        "path": "/",
+        "path": "/index",
         "component": dynamic({ loader: () => import(/* webpackChunkName: 'layouts__index' */'@/layouts/index')}),
+        "redirect": "/user",
         "routes": [
           {
             "exact": false,
