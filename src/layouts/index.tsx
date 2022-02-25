@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
 interface IProps{
-    children?: ReactNode
+    children?:ReactNode
 }
-function Layout(props:IProps){
+function Layout({children}:IProps){
     return (
         <>
-            {props?.children}
+            {children}
         </>
     )
 }
