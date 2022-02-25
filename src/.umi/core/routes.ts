@@ -11,9 +11,9 @@ export function getRoutes() {
     "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-layout__Layout' */'/Users/flexiv/Desktop/andDesignPro/src/.umi/plugin-layout/Layout.tsx')}),
     "routes": [
       {
+        "exact": true,
         "path": "/",
-        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'@/pages/index')}),
-        "exact": true
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'/Users/flexiv/Desktop/andDesignPro/src/pages/index')})
       }
     ]
   }
