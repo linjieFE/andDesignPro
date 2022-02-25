@@ -8,8 +8,14 @@ export function getRoutes() {
   const routes = [
   {
     "path": "/",
-    "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'@/pages/index')}),
-    "exact": true
+    "component": dynamic({ loader: () => import(/* webpackChunkName: '.umi__plugin-layout__Layout' */'/Users/flexiv/Desktop/andDesignPro/src/.umi/plugin-layout/Layout.tsx')}),
+    "routes": [
+      {
+        "path": "/",
+        "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__index' */'@/pages/index')}),
+        "exact": true
+      }
+    ]
   }
 ];
 

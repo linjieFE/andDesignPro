@@ -20,3 +20,9 @@ $ yarn start
 ### 目录结构
 src => 工程目录
     page =>页面内容
+
+#### .umirc.ts 增加mfsu 加速webpack热更新 
+
+#### 配置菜单
+
+.umirc.ts 增加layout:{} 配置项
