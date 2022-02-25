@@ -1,5 +1,5 @@
 import { Request,Response } from 'express';
- 
+import mockjs from 'mockjs';
 export default {
     // 支持值为 Object 和 Array
     'GET /api/users': { users: [1, 2] },
